@@ -71,6 +71,11 @@ func Generate(project *Project) error {
 	ExecSlowCmd("composer create-project --prefer-dist --no-install laravel/laravel ./ 5.6.*")
 
 	Copy(
+		"template/README.md",
+		"README.md",
+	)
+
+	Copy(
 		"template/.env",
 		".env",
 	)
